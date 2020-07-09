@@ -1,0 +1,37 @@
+@import 'base';
+
+#menu-link {
+    z-index: 10;
+}
+
+#menu-icon {
+    z-index: 10;
+    position: fixed;
+    top: 5vh;
+    right: 5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+        font-family: $paragraph-font;
+        color: $color-primary;
+        font-size: 30px;
+    }
+
+    #menu-lines {
+        transition-duration: 1s;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        hr{
+            margin: 4px;
+            width: 20px;
+            height: 2px;
+            background-color: $color-secondary;
+            border-width: 0;
+        }
+    }
+}

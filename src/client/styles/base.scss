@@ -2,3 +2,101 @@
 $color-primary: #f7931e;
 $color-secondary: #2e1e33;
 $color-light-grey: #b3b3b3;
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+$paragraph-font: 'Raleway', sans-serif;
+$title-font: 'Amatic SC', cursive;
+
+
+//Media query break-points
+$media-break-point-tablet: 850px;
+$media-break-point-phone: 500px;
+
+//background img 
+body {
+    background-image: url('./../images/background.png');
+    background-size: 100vw;
+    background-repeat: repeat-y;
+}
+
+
+#main-content {
+    margin: 5%;
+}
+
+#front-img-div {
+    transition-duration: 1s;
+    z-index: 9;
+    position: fixed;
+    bottom: 0px;
+    right: 5vw;
+
+    #front-img {
+        z-index: 9;
+        width: 35vw;
+    }
+}
+
+
+#section1 {
+    width: 60vw;
+
+    p {
+        padding-top: 40px;
+    }
+}
+
+h1 {
+    padding-top: 20px;
+    font-family: $title-font;
+    font-size: 4.5em;
+    color: $color-primary;
+
+    span {
+        color: $color-secondary;
+    }
+}
+
+p {
+    font-family: $paragraph-font;
+    font-size: 1.5em;
+    color: $color-light-grey;
+}
+
+
+
+
+//Media query for phone size
+
+
+@media (max-width: $media-break-point-tablet) {
+    #section1 {
+        width: 60vw;
+        
+        h1 {
+            padding-top: 40px;
+            font-size: 3.5em;
+        }
+    }
+    
+}
+
+@media (max-width: $media-break-point-phone) {
+    #menu-icon {
+        p {
+            display: none;
+        }
+    }
+    #section1 {
+        width: 90vw;
+
+
+        h1 {
+            font-size: 3em;
+        }
+    
+    }
+    
+}

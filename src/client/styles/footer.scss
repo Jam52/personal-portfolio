@@ -18,7 +18,11 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 0 0 20px 20px;
+        padding: 0 0 20px 0;
+
+        .footer-contact {
+            margin-left: 5vw;
+        }
 
         .footer-social-icon{
             padding: 0px 20px 20px 0px;
@@ -28,12 +32,25 @@ footer {
                 opacity: 0.5;
 
                 &:hover {
+                    animation: pulse 0.8s infinite;
                     opacity: 1;
                     transform: scale(1.2);
                 }
             }
 
-
         }
     }
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
