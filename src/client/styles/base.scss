@@ -2,7 +2,7 @@
 $color-primary: #f7931e;
 $color-secondary: #2e1e33;
 $color-light-grey: #b3b3b3;
-
+$color-dark-grey: #666;
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
@@ -40,7 +40,7 @@ body {
 }
 
 
-#section1 {
+#section-return {
     width: 60vw;
 
     p {
@@ -65,15 +65,15 @@ p {
     color: $color-light-grey;
 }
 
-
+//@extend
+.load {
+        opacity: 1;
+    }
 
 
 //Media query for phone size
-
-
 @media (max-width: $media-break-point-tablet) {
-    #section1 {
-        width: 60vw;
+    #section-return {
         
         h1 {
             padding-top: 40px;
@@ -89,7 +89,7 @@ p {
             display: none;
         }
     }
-    #section1 {
+    #section-return {
         width: 90vw;
 
 
@@ -99,4 +99,18 @@ p {
     
     }
     
+}
+
+
+//keyframes
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
