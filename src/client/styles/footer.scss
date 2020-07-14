@@ -9,12 +9,14 @@ footer {
     
     #footer-paper {
         width: 100%;
-        height: 10vw;
+        height: 5vw;
+        transform: translateY(2px) ;
     }
 
     #footer-background {
+        transition-duration: 1s;
         background-color: $color-secondary;
-        height: 10vh;
+        height: 7vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -28,7 +30,7 @@ footer {
             padding: 0px 20px 20px 0px;
 
             img {
-                height: 6vh;
+                height: 5vh;
                 opacity: 0.5;
 
                 &:hover {

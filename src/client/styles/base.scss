@@ -1,7 +1,7 @@
 //Colors
 $color-primary: #f7931e;
 $color-secondary: #2e1e33;
-$color-light-grey: #b3b3b3;
+$color-light-grey: #b1b1b1;
 $color-dark-grey: #666;
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
@@ -19,6 +19,7 @@ body {
     background-image: url('./../images/background.png');
     background-size: 100vw;
     background-repeat: repeat-y;
+    background-color: #f8f8f8;
 }
 
 
@@ -30,7 +31,7 @@ body {
     transition-duration: 1s;
     z-index: 9;
     position: fixed;
-    bottom: 0px;
+    bottom: -2px;
     right: 5vw;
 
     #front-img {
@@ -39,17 +40,18 @@ body {
     }
 }
 
+.section {
+    min-height:75vh;
+    width: 80vw;
+    padding-bottom: 20vh;
 
-#section-return {
-    width: 60vw;
-
-    p {
-        padding-top: 40px;
+    .section-paragraph {
+        padding-bottom: 5vh;
     }
 }
 
 h1 {
-    padding-top: 20px;
+    padding: 40px 0px;
     font-family: $title-font;
     font-size: 4.5em;
     color: $color-primary;
@@ -59,10 +61,29 @@ h1 {
     }
 }
 
+h2 {
+    padding: 40px 0px;
+    font-family: $title-font;
+    font-size: 3.5em;
+    color: $color-primary;
+
+    span {
+        color: $color-secondary;
+    }
+}
+
 p {
     font-family: $paragraph-font;
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: $color-light-grey;
+}
+
+a {
+    text-decoration: none;
+}
+
+#section-return {
+    width: 60vw;
 }
 
 //@extend
@@ -84,18 +105,21 @@ p {
 }
 
 @media (max-width: $media-break-point-phone) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .section {
+        min-height:83vh;
+    }
+
     #menu-icon {
         p {
             display: none;
         }
     }
     #section-return {
-        width: 90vw;
-
-
-        h1 {
-            font-size: 3em;
-        }
+        width: 80vw;
     
     }
     

@@ -1,6 +1,7 @@
 const addMenu = (targetDiv) => {
     const sections = document.querySelectorAll('.section');
     const menuList = targetDiv.childNodes;
+    const footerBackground = document.getElementById('footer-background');
 
     setTimeout(function() {
         sections.forEach((item, index) => {
@@ -17,7 +18,29 @@ const addMenu = (targetDiv) => {
             a.appendChild(p2);
             div.appendChild(a);
             div.classList.add('menu-item');
-            targetDiv.appendChild(div);   
+            targetDiv.appendChild(div);  
+            
+            //add event listener
+            a.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetSection = document.getElementById('section-' + name);
+                if(targetSection.id == 'section-return') {
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: 'smooth'
+                      });
+                    animateMenu();
+
+                } else {
+                    targetSection.scrollIntoView({behavior: 'smooth'});
+                    animateMenu();
+                }
+    
+            })
+
+
+
             menuList.forEach(item => {
                 setTimeout(function(){
                     item.classList.add('load');
@@ -25,9 +48,29 @@ const addMenu = (targetDiv) => {
             });     
         })
     },300)
-    
 
 }
+
+const menuLines = document.getElementById('menu-lines');
+const frontImg = document.getElementById('front-img-div');
+const footerBackground = document.getElementById('footer-background');
+const menuTarget = document.getElementById('menu');
+
+
+const animateMenu = () => {
+    if(footerBackground.style.height == '75vh') {
+        removeMenu(menuTarget);
+        footerBackground.style.height = '7vh';
+        menuLines.style.transform = ('rotate(0deg)');
+        frontImg.style.right = '5vw';
+    } else {
+        footerBackground.style.height = '75vh'
+        frontImg.style.right = '-100vw'
+        menuLines.style.transform = ('rotate(180deg)');
+        addMenu(menuTarget);
+    }
+}
+
 
 const removeMenu = (targetDiv) => {
     const childNodes = targetDiv.childNodes;
@@ -40,5 +83,6 @@ const removeMenu = (targetDiv) => {
 
 export {
     addMenu,
-    removeMenu
+    removeMenu,
+    animateMenu
 }
