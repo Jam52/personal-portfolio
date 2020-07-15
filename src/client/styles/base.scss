@@ -28,14 +28,13 @@ body {
 }
 
 #front-img-div {
-    transition-duration: 1s;
-    z-index: 9;
+    transition-duration: 1.5s;
+    z-index: 21;
     position: fixed;
     bottom: -2px;
     right: 5vw;
 
     #front-img {
-        z-index: 9;
         width: 35vw;
     }
 }
@@ -43,10 +42,11 @@ body {
 .section {
     min-height:75vh;
     width: 80vw;
+    max-width: 900px;
     padding-bottom: 20vh;
 
     .section-paragraph {
-        padding-bottom: 5vh;
+        padding-bottom: 2vh;
     }
 }
 
@@ -62,7 +62,7 @@ h1 {
 }
 
 h2 {
-    padding: 40px 0px;
+    padding: 0 0 40px 0;
     font-family: $title-font;
     font-size: 3.5em;
     color: $color-primary;

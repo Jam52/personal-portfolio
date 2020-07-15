@@ -55,16 +55,23 @@ const menuLines = document.getElementById('menu-lines');
 const frontImg = document.getElementById('front-img-div');
 const footerBackground = document.getElementById('footer-background');
 const menuTarget = document.getElementById('menu');
-
+const footerContact = document.getElementById('footer-contact');
 
 const animateMenu = () => {
-    if(footerBackground.style.height == '75vh') {
+    if(footerBackground.style.height >= "80vh") {
         removeMenu(menuTarget);
-        footerBackground.style.height = '7vh';
+        footerBackground.style.height = '0vh';
         menuLines.style.transform = ('rotate(0deg)');
-        frontImg.style.right = '5vw';
+        
+        if(window.scrollY < window.innerHeight * 0.55) {
+            frontImg.style.right = '5vw';
+        } else {
+            footerContact.style.opacity = 0;
+        }
+
     } else {
-        footerBackground.style.height = '75vh'
+        footerBackground.style.height = '80vh'
+        footerContact.style.opacity = 1;
         frontImg.style.right = '-100vw'
         menuLines.style.transform = ('rotate(180deg)');
         addMenu(menuTarget);

@@ -55,6 +55,10 @@ module.exports = {
             filename: 'index.html',
             template: './src/client/views/index.html'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'projectGallery.html',
+            template: './src/client/views/projectGallery.html'
+        }),
         new CleanWebpackPlugin({
             // Simulate the removal of files
             dry: true,
