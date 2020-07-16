@@ -32,7 +32,7 @@ footer {
             padding: 0px 20px 20px 0px;
 
             img {
-                height: 7vh;
+                height: 6vh;
                 opacity: 0.5;
 
                 &:hover {
@@ -46,5 +46,14 @@ footer {
     }
 }
 
+//Media query for tablet size
+@media (max-width: $media-break-point-tablet) {
+}
 
+//Media query for phone size
+@media (max-width: $media-break-point-phone) {
+    .footer-social-icon img{
+        height: 3vh;
+    }
+}
 
