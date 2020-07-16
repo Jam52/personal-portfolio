@@ -8,7 +8,7 @@ import './styles/gallery.scss';
 //import js
 const { addMenu, removeChild } = require('./js/addMenu');
 const { animateMenu } = require('./js/addMenu');
-const { addGallery } = require('./js/addGallery');
+const { addGallery, removeGallery } = require('./js/addGallery');
 
 
 //footer menu click animation
@@ -51,26 +51,14 @@ const checkForParent = (target) => {
 
 
 //scroll listener to remove from image when not at top of screen
-const frontImg = document.getElementById('front-img-div');
-const footerBackground = document.getElementById('footer-background');
-const footerContact = document.getElementById('footer-contact');
-let viewHeight = window.innerHeight;
-
-
 window.addEventListener('scroll', (event) => {
     let scrollY = window.scrollY;
-    let galleryDiv = document.getElementById('popup-gallery-container');
-    if(galleryDiv.hasChildNodes()) {
-        galleryDiv.removeChild(galleryDiv.childNodes[0]);
-    }
-    if(scrollY > viewHeight * 0.5) {
-        frontImg.style.right = '-100vw';
-        footerBackground.style.height = '0vh';
-        footerContact.style.opacity = 0;
-    } else {
-        frontImg.style.right = '5vw';
-        footerBackground.style.height = '20vh';
-        footerContact.style.opacity = 1;
-        
-    }
+    removeGallery(scrollY)
+})
+
+//scroll listener for gallery cross
+const galleryCross = document.getElementById('gallery-cross');
+galleryCross.addEventListener('click', (event) => {
+    let scrollY = window.scrollY;
+    removeGallery(scrollY)
 })
