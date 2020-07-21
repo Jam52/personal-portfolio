@@ -1,11 +1,18 @@
 @import 'base';
 
+.education-elements-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 .education-element {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     align-items: center;
     width: 90%;
-    margin: 0.2em auto;
+    margin: 0.1em auto;
 
 
     p {
@@ -14,7 +21,7 @@
     }
 
     .education-info {
-        margin: 5vw;
+        margin: 2vw;
     }
 }
 
@@ -39,7 +46,7 @@
 
     .hidden {
         transition-property: opacity;
-        transition-duration: 0.5s;
+        transition-duration: 0.3s;
         opacity: 0;
 
         &:hover {
@@ -50,7 +57,7 @@
     &:hover {
         transition-duration: 0.5s;
         border-radius: 0%;
-        width: 40vmin;
+        width: 32vmin;
         padding-top: 77.5%;
     }
 

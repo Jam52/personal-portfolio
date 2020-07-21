@@ -19,6 +19,8 @@ body {
     background-size: 100vw;
     background-image: url('../images/background.png');
     background-attachment: fixed;
+    background-repeat: repeat-y;
+    background-position: 0px 0px;
     //background: linear-gradient(135deg, #fff 0%, #eee 50%,  #fff 100%);
 }
 

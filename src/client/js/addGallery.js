@@ -1,5 +1,6 @@
 //load projectGalleryHTML
 import gallery from '../views/projectGallery.html'
+import { removeMenu } from './addMenu';
 
 
 const loadGalleryFrag = () =>{
@@ -54,6 +55,12 @@ const removeGallery = (scrollY) => {
     console.log(document.body.offsetHeight);
     console.log(window.innerHeight + scrollY);
     galleryCross.style.opacity = 0;
+
+    //remove menu elements
+    const menuTarget = document.getElementById('menu');
+    removeMenu(menuTarget);
+
+    //remove gallery div elements
     if(galleryDiv.hasChildNodes()) {
         galleryDiv.removeChild(galleryDiv.childNodes[0]);
     }

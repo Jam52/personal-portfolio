@@ -21,7 +21,7 @@ menuLink.addEventListener('click', (event) => {
     animateMenu();
 })
 
-
+//disable scroll while gallery popup is enabled
 function disableScrolling(){
     var x=window.scrollX;
     var y=window.scrollY;
@@ -60,9 +60,11 @@ const checkForParent = (target) => {
 
 
 const footerBackground = document.getElementById('footer-background');
+const mainbody = document.querySelector('body');
 //scroll listener to remove from image when not at top of screen
 window.addEventListener('scroll', (event) => {
     let scrollY = window.scrollY;
+    mainbody.style.backgroundPositionY = `${scrollY/10}px`;
     if(footerBackground.style.height != '100vh'){
         removeGallery(scrollY)
     }
