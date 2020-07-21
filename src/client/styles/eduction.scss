@@ -2,22 +2,64 @@
 
 .education-element {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 90%;
-    margin: auto;
+    margin: 0.2em auto;
+
 
     p {
-        width: 60%;
+        color: $color-light-grey;
+        
+    }
+
+    .education-info {
+        margin: 5vw;
     }
 }
 
-.education-img {
+.education-img-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    width: 25vmin;
+    padding-top: 100%;
+    border-radius: 50%;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
-    margin: 1em 0;
-    width: 18vw;
-    min-width: 200px;
+    
+
+    .education-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%
+    }
+
+    .hidden {
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        transition-duration: 0.5s;
+        border-radius: 0%;
+        width: 40vmin;
+        padding-top: 77.5%;
+    }
+
+    
+
+
 }
+
+
 
 
 

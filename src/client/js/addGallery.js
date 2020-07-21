@@ -18,8 +18,7 @@ const galleryCross = document.getElementById('gallery-cross');
 
 const addGallery = (target) => {
     const loadGallery = loadGalleryFrag();
-    const targetGalleryElements = loadGallery.getElementById(`${target.id}-gallery`)
-    
+    const targetGalleryElements = loadGallery.getElementById(`${target.id}-gallery`);
     //raise footer background
     footerBackground.style.height = '100vh';
     galleryCross.style.opacity = 1;

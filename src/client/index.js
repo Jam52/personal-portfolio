@@ -22,6 +22,12 @@ menuLink.addEventListener('click', (event) => {
 })
 
 
+function disableScrolling(){
+    var x=window.scrollX;
+    var y=window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
+}
+
 //gallery images eventlistener
 const gallerys = document.getElementById('projects')
 gallerys.addEventListener('click', (e) => {
@@ -29,6 +35,8 @@ gallerys.addEventListener('click', (e) => {
         const targetSlide = checkForParent(e.target);
         console.log(targetSlide)
         if(targetSlide != null){
+            console.log('disable scroll')
+            disableScrolling();
             addGallery(targetSlide);
         }
     })
@@ -51,16 +59,26 @@ const checkForParent = (target) => {
 
 
 
-
+const footerBackground = document.getElementById('footer-background');
 //scroll listener to remove from image when not at top of screen
 window.addEventListener('scroll', (event) => {
     let scrollY = window.scrollY;
-    removeGallery(scrollY)
+    if(footerBackground.style.height != '100vh'){
+        removeGallery(scrollY)
+    }
 })
 
-//scroll listener for gallery cross
+
+
+function enableScrolling(){
+    window.onscroll=function(){};
+}
+
+
+//click listener for gallery cross
 const galleryCross = document.getElementById('gallery-cross');
 galleryCross.addEventListener('click', (event) => {
     let scrollY = window.scrollY;
+    enableScrolling();
     removeGallery(scrollY)
 })
