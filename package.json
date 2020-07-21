@@ -41,7 +41,7 @@
     "webpack": "^4.43.0"
   },
   "devDependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "resolve-url-loader": "^3.1.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
