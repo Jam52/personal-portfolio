@@ -1,0 +1,29 @@
+@import 'base';
+
+.education-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+
+    p {
+        width: 60%;
+    }
+}
+
+.education-img {
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 1em 0;
+    width: 18vw;
+    min-width: 200px;
+}
+
+
+
+@media (max-width: $media-break-point-phone) {
+    .education-element {
+        flex-direction: column;
+        text-align: center;
+    }
+}

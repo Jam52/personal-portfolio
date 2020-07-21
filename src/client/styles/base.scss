@@ -2,7 +2,7 @@
 $color-primary: #f7931e;
 $color-secondary: #2e1e33;
 $color-light-grey: #b1b1b1;
-$color-dark-grey: #666;
+$color-dark-grey: #444;
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
@@ -16,10 +16,10 @@ $media-break-point-phone: 500px;
 
 //background img 
 body {
-    background-image: url('./../images/background.png');
     background-size: 100vw;
-    background-repeat: repeat-y;
-    background-color: #f8f8f8;
+    background-image: url('../images/background.png');
+    background-attachment: fixed;
+    //background: linear-gradient(135deg, #fff 0%, #eee 50%,  #fff 100%);
 }
 
 
@@ -44,6 +44,7 @@ body {
     width: 80vw;
     max-width: 900px;
     padding-bottom: 20vh;
+    margin: auto;
 
     .section-paragraph {
         padding-bottom: 2vh;
@@ -53,7 +54,7 @@ body {
 h1 {
     padding: 40px 0px;
     font-family: $title-font;
-    font-size: 4.5em;
+    font-size: 12vmin;
     color: $color-primary;
 
     span {
@@ -64,7 +65,7 @@ h1 {
 h2 {
     padding: 0 0 40px 0;
     font-family: $title-font;
-    font-size: 3.5em;
+    font-size: 10vmin;
     color: $color-primary;
 
     span {
@@ -74,8 +75,9 @@ h2 {
 
 p {
     font-family: $paragraph-font;
-    font-size: 1.4em;
-    color: $color-light-grey;
+    font-size: 1.3em;
+    max-width: 50ch;
+    color: $color-dark-grey;
 }
 
 a {
@@ -83,7 +85,8 @@ a {
 }
 
 #section-return {
-    width: 60vw;
+    width: 70vw;
+    margin: 0;
 }
 
 //@extend
@@ -94,30 +97,32 @@ a {
 
 //Media query for phone size
 @media (max-width: $media-break-point-tablet) {
-    #section-return {
-        
-        h1 {
-            padding-top: 40px;
-            font-size: 3.5em;
-        }
-    }
-    
-}
-
-@media (max-width: $media-break-point-phone) {
-    h1 {
-        font-size: 3em;
-    }
-
-    .section {
-        min-height:83vh;
-    }
 
     #menu-icon {
         p {
             display: none;
         }
     }
+    #section-return {
+        
+        h1 {
+            padding-top: 40px;
+        }
+    }
+    
+}
+
+@media (max-width: $media-break-point-phone) {
+    #front-img-div {
+        #front-img {
+            width: 50vw;
+        }
+    }
+
+    .section {
+        min-height:83vh;
+    }
+
     #section-return {
         width: 80vw;
     

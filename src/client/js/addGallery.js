@@ -52,19 +52,20 @@ const addGallery = (target) => {
 const removeGallery = (scrollY) => {
     let viewHeight = window.innerHeight;
     const frontImg = document.getElementById('front-img-div');
-    console.log(scrollY)
+    console.log(document.body.offsetHeight);
+    console.log(window.innerHeight + scrollY);
     galleryCross.style.opacity = 0;
     if(galleryDiv.hasChildNodes()) {
         galleryDiv.removeChild(galleryDiv.childNodes[0]);
     }
-    if(scrollY > viewHeight * 0.5) {
-        frontImg.style.right = '-100vw';
-        footerBackground.style.height = '0vh';
-        footerContact.style.opacity = 0;
-    } else {
+    if(scrollY < viewHeight * 0.5 || (window.innerHeight + scrollY) >= document.body.offsetHeight) {
         frontImg.style.right = '5vw';
         footerBackground.style.height = '20vh';
         footerContact.style.opacity = 1;
+    } else {
+        frontImg.style.right = '-100vw';
+        footerBackground.style.height = '0vh';
+        footerContact.style.opacity = 0;
     }
 }
 

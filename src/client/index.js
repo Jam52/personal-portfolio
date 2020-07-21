@@ -4,6 +4,8 @@ import './styles/base.scss';
 import './styles/footer.scss';
 import './styles/menu.scss';
 import './styles/gallery.scss';
+import './styles/eduction.scss';
+import './styles/contact.scss';
 
 //import js
 const { addMenu, removeChild } = require('./js/addMenu');

@@ -1,3 +1,5 @@
+import { removeGallery } from "./addGallery";
+
 const addMenu = (targetDiv) => {
     const sections = document.querySelectorAll('.section');
     const menuList = targetDiv.childNodes;
@@ -39,8 +41,6 @@ const addMenu = (targetDiv) => {
     
             })
 
-
-
             menuList.forEach(item => {
                 setTimeout(function(){
                     item.classList.add('load');
@@ -59,16 +59,10 @@ const footerContact = document.getElementById('footer-contact');
 
 const animateMenu = () => {
     if(footerBackground.style.height >= "80vh") {
+        const scrollY = window.scrollY;
         removeMenu(menuTarget);
-        footerBackground.style.height = '0vh';
+        removeGallery(scrollY)
         menuLines.style.transform = ('rotate(0deg)');
-        
-        if(window.scrollY < window.innerHeight * 0.55) {
-            frontImg.style.right = '5vw';
-        } else {
-            footerContact.style.opacity = 0;
-        }
-
     } else {
         footerBackground.style.height = '80vh'
         footerContact.style.opacity = 1;

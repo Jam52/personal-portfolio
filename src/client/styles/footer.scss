@@ -52,8 +52,8 @@ footer {
 
 //Media query for phone size
 @media (max-width: $media-break-point-phone) {
-    .footer-social-icon img{
-        height: 3vh;
+    footer #footer-background .footer-social-icon img{
+        height: 3.5vh;
     }
 }
 
