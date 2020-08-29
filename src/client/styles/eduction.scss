@@ -1,78 +1,68 @@
-@import 'base';
+@import "base";
 
 .education-elements-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .education-element {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    width: 90%;
-    margin: 0.1em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+  width: 90%;
+  margin: 0.1rem auto;
 
+  p {
+    color: $color-light-grey;
+  }
 
-    p {
-        color: $color-light-grey;
-        
-    }
-
-    .education-info {
-        margin: 2vw;
-    }
+  .education-info {
+    margin: 1rem;
+  }
 }
 
 .education-img-container {
-    position: relative;
-    overflow: hidden;
-    background-color: #000;
-    width: 25vmin;
-    padding-top: 100%;
-    border-radius: 50%;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
-    
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  width: 25vmin;
+  height: 25vmin;
+  padding-top: 100%;
+  border-radius: 50%;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
 
-    .education-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 100%
-    }
+  .education-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+  }
 
-    .hidden {
-        transition-property: opacity;
-        transition-duration: 0.3s;
-        opacity: 0;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
+  .hidden {
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    opacity: 0;
 
     &:hover {
-        transition-duration: 0.5s;
-        border-radius: 0%;
-        width: 32vmin;
-        padding-top: 77.5%;
+      opacity: 1;
     }
+  }
 
-    
-
-
+  &:hover {
+    transition-duration: 0.5s;
+    border-radius: 0%;
+    width: 32vmin;
+    padding-top: 18vmin;
+  }
 }
 
-
-
-
-
 @media (max-width: $media-break-point-phone) {
-    .education-element {
-        flex-direction: column;
-        text-align: center;
-    }
+  .education-element {
+    flex-direction: column;
+    text-align: center;
+  }
 }

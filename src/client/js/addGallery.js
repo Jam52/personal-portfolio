@@ -5,25 +5,27 @@ import { removeMenu } from './addMenu';
 
 const loadGalleryFrag = () =>{
     const frag = document.createDocumentFragment();
-    const div = document.createElement('div')
+    const div = document.createElement('div');
     div.innerHTML = gallery;
     frag.appendChild(div);
     return frag
 }
 
 const footerBackground = document.getElementById('footer-background');
-const footerDiv = document.getElementById('footer-div')
 const galleryDiv = document.getElementById('popup-gallery-container');
 const footerContact = document.getElementById('footer-contact');
 const galleryCross = document.getElementById('gallery-cross');
 
 const addGallery = (target) => {
+    //load gallery content
     const loadGallery = loadGalleryFrag();
     const targetGalleryElements = loadGallery.getElementById(`${target.id}-gallery`);
+
     //raise footer background
     footerBackground.style.height = '100vh';
     galleryCross.style.opacity = 1;
 
+    //create gallery fragment
     const newFrag = document.createDocumentFragment();
     newFrag.appendChild(targetGalleryElements);
     galleryDiv.appendChild(newFrag);
@@ -31,6 +33,7 @@ const addGallery = (target) => {
     const thumbImgs = document.getElementById('thumb-imgs');
     setMainImg(thumbImgs.firstElementChild.firstElementChild.src);
 
+    //add event listener to thumb imgs
     thumbImgs.addEventListener('click', (e) => {
         const target = e.target;
         if(target && target.matches('.thumb-img')){

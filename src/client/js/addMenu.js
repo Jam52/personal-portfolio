@@ -47,7 +47,7 @@ const addMenu = (targetDiv) => {
                 }, 100 * (index + 3));  
             });     
         })
-    },300)
+    },400)
 
 }
 
@@ -61,7 +61,7 @@ const animateMenu = () => {
     if(footerBackground.style.height >= "80vh") {
         const scrollY = window.scrollY;
         removeMenu(menuTarget);
-        removeGallery(scrollY)
+        removeGallery(scrollY);
         menuLines.style.transform = ('rotate(0deg)');
     } else {
         footerBackground.style.height = '80vh'

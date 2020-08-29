@@ -1,4 +1,4 @@
-@import 'base';
+@import "base";
 
 #section-contact {
     p {
@@ -11,7 +11,12 @@
 
     .contact {
         color: $color-light-grey;
-
-        
     }
+}
+
+.contact-form {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }

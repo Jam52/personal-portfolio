@@ -8,7 +8,6 @@ import './styles/eduction.scss';
 import './styles/contact.scss';
 
 //import js
-const { addMenu, removeChild } = require('./js/addMenu');
 const { animateMenu } = require('./js/addMenu');
 const { addGallery, removeGallery } = require('./js/addGallery');
 
