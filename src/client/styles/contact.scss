@@ -31,7 +31,29 @@
     }
 
     &__input {
-        padding: 0.5rem;
+        padding: 0.7rem;
+        border: none;
+        background-color: #eee;
+
+        &:focus {
+            border: 1px solid $color-primary;
+            border-radius: none;
+        }
+    }
+
+    &__submit {
+        height: 2.5rem;
+        background-color: $color-primary;
+        color: #fff;
+        border: none;
+        font-family: $paragraph-font;
+        font-size: 1.1rem;
+        opacity: 0.8;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
     label {
