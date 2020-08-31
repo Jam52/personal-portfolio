@@ -42,42 +42,64 @@
             </div>
             <div
                 class="section"
-                id="section-portfolio"
-                name="portfolio"
+                id="section-development"
+                name="development"
                 value="projects"
             >
-                <h2>Portfolio <span>Projects</span></h2>
+                <h2>Development <span>Projects</span></h2>
                 <p class="section-paragraph">
                     Below are some select projects that I am proud of from my
-                    web development training so far, projects from my industrial
-                    design career and also some self driven projects I am
-                    particuly proud of.
+                    web development training so far.
                 </p>
                 <div class="gallery" id="projects">
-                    <div class="slide" id="madame-mimis">
+                    <div class="slide" id="personal-portfolio">
                         <div class="slide-img">
-                            <img src="../images/madam-mimis-thumb.jpg" />
+                            <img src="../images/personalPortfolio.JPG" />
                         </div>
-                        <p>web development</p>
+                        <p>Html, CSS, JS, Webpack</p>
                     </div>
                     <div class="slide" id="travel-planner">
                         <div class="slide-img">
                             <img src="../images/travel-thumb.JPG" />
                         </div>
-                        <p>web development</p>
+                        <p>Node, Express, RESTful API</p>
                     </div>
+
+                    <div class="slide" id="small-foods">
+                        <div class="slide-img">
+                            <img src="../images/smallfoods-thumb.JPG" />
+                        </div>
+                        <p>Html, CSS, BEM, WCAG</p>
+                    </div>
+                    <div class="slide" id="madame-mimis">
+                        <div class="slide-img">
+                            <img src="../images/madam-mimis-thumb.jpg" />
+                        </div>
+                        <p>React, CSS, RESTful API</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="section"
+                id="section-design"
+                name="design"
+                value="projects"
+            >
+                <h2>Design <span>Projects</span></h2>
+                <p class="section-paragraph">
+                    Below are some select projects from my industrial design
+                    career and some self driven propjects I am particularly
+                    proud of.
+                </p>
+                <div class="gallery" id="design">
                     <div class="slide" id="orbit">
                         <div class="slide-img">
                             <img src="../images/orbit.jpg" />
                         </div>
                         <p>furniture design</p>
                     </div>
-                    <div class="slide" id="personal-portfolio">
-                        <div class="slide-img">
-                            <img src="../images/personalPortfolio.JPG" />
-                        </div>
-                        <p>web development</p>
-                    </div>
+
                     <div class="slide" id="float">
                         <div class="slide-img">
                             <img src="../images/floatEscape.jpg" />
@@ -110,6 +132,7 @@
                     </div>
                 </div>
             </div>
+
             <div
                 class="section"
                 id="section-education"
@@ -201,25 +224,51 @@
                     </div>
                 </div>
             </div>
-            <div class="section" id="section-contact" name="contact" value="me">
+            <!-- <div class="section" id="section-contact" name="contact" value="me">
                 <h2>Contact <span>Me</span></h2>
                 <h3>Thank you for taking the time to view my portfolio!</h3>
                 <p class="contact">jamie.sajdak@gmail.com</p>
                 <p class="contact">Toronto, ON</p>
                 <p class="contact">(647) 465 4864</p>
-            </div>
-            <!-- <div class="section" id="section-contact" name="contact" value="me">
-                <form class="contact-form" action="https://mailthis.to/jamie.sajdak@gmail.com" method="POST" encType="multipart/form-data">
-                    <input type="text" name="name" placeholder="Your name">
-                    <input type="email" name="_replyto" placeholder="Your email">
-                    <textarea name="message" placeholder="Enter your message here"></textarea>
-                    <input type="hidden" name="_subject" value="Contact form submitted">
-                    <input type="hidden" name="_after" value="https://myhomepage.net/">
-                    <input type="hidden" name="_honeypot" value="">
-                    <input type="hidden" name="_confirmation" value="">
-                    <input type="submit" value="Send">
-                </form>
             </div> -->
+            <div class="section" id="section-contact" name="contact" value="me">
+                <div class="contact-section__text">
+                    <h2>Contact <span>Me</span></h2>
+                    <h3>Thank you for taking the time to view my portfolio!</h3>
+                    <p class="contact">jamie.sajdak@gmail.com</p>
+                    <p class="contact">(647) 465 4864</p>
+                    <p class="contact">Toronto, ON</p>
+                </div>
+
+                <form
+                    class="contact-form"
+                    action="https://formspree.io/xeqrbrbb"
+                    method="POST"
+                >
+                    <div class="contact-form__section">
+                        <label for="_replyto">Email:</label>
+                        <input
+                            type="email"
+                            name="_replyto"
+                            id="_replyto"
+                            class="contact-form__input"
+                        />
+                    </div>
+                    <div class="contact-form__section">
+                        <label for="text">Message:</label>
+                        <textarea
+                            class="contact-form__input"
+                            type="textarea"
+                            rows="3"
+                            name="text"
+                            id="text"
+                        ></textarea>
+                    </div>
+                    <div class="contact-form__section">
+                        <input type="submit" value="Send" />
+                    </div>
+                </form>
+            </div>
         </main>
 
         <footer id="footer-div">

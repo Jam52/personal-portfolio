@@ -2,11 +2,11 @@
 
 #section-contact {
     p {
-        padding: 0.2em;
+        padding: 0.2rem;
     }
 
     h3 {
-        margin-bottom: 1.5em;
+        margin-bottom: 0.5rem;
     }
 
     .contact {
@@ -14,9 +14,35 @@
     }
 }
 
+.contact-section__text {
+    margin-bottom: 1rem;
+}
+
 .contact-form {
-    width: 60%;
-    margin: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    padding-bottom: 10vh;
+
+    &__section {
+        display: flex;
+        flex-flow: column;
+        padding: 0.5rem 0;
+    }
+
+    &__input {
+        padding: 0.5rem;
+    }
+
+    label {
+        font-family: $title-font;
+        font-size: 1.6rem;
+        padding: 0.5rem 0;
+    }
+}
+
+@media (min-width: $media-break-point-tablet) {
+    .contact-form {
+        width: 60%;
+    }
 }

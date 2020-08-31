@@ -1,12 +1,10 @@
-@import 'base';
+@import "base";
 
 .gallery {
     margin-top: 5vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 15px;
-
-    
 
     .slide {
         max-width: 350px;
@@ -18,17 +16,14 @@
         padding: 7%;
         background-color: #fff;
         cursor: pointer;
-        
-    
 
         .slide-img {
             position: relative;
-            border: 1px $color-light-grey solid ;
+            border: 1px $color-light-grey solid;
             width: 100%;
             padding-top: 100%;
             overflow: hidden;
             margin-bottom: 15px;
-            
 
             img {
                 transition-duration: 0.3s;
@@ -44,19 +39,18 @@
         p {
             color: $color-light-grey;
             font-family: $title-font;
-            font-size: 2em;
+            font-size: 1.4rem;
             text-align: center;
             transition-duration: 0.2s;
         }
 
         &:hover {
-
             div img {
                 top: -5%;
                 left: -5%;
                 height: 110%;
             }
-            
+
             p {
                 transform: scale(1.02);
                 color: $color-primary;
@@ -73,11 +67,10 @@
     cursor: pointer;
 }
 
-#popup-gallery-container{
+#popup-gallery-container {
     height: 80vh;
     width: 90vw;
     margin: auto;
-
 }
 
 .popup-gallery {
@@ -99,7 +92,6 @@
         color: $color-primary;
         font-size: 1.3rem;
     }
-    
 
     .main-img {
         grid-area: main;
@@ -117,7 +109,7 @@
     p {
         color: $color-light-grey;
         grid-area: para;
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     #thumb-imgs {
@@ -128,7 +120,7 @@
         justify-content: flex-end;
 
         .thumb-container {
-            margin:  0px 1vw;
+            margin: 0px 1vw;
             height: 100%;
             max-width: 15vmin;
             overflow: hidden;
@@ -142,7 +134,7 @@
 
             img {
                 height: 100%;
-                cursor: pointer;    
+                cursor: pointer;
             }
         }
 
@@ -150,14 +142,8 @@
             border: 3px solid $color-primary;
             transform: scale(1.1);
         }
-
     }
-
 }
-
-
-
-
 
 //Media query for tablet size
 @media (max-width: $media-break-point-tablet) {
@@ -166,7 +152,7 @@
 
         .slide p {
             font-size: 1.5em;
-        } 
+        }
     }
 
     .popup-gallery {
@@ -175,7 +161,6 @@
             "para para main main main"
             "para para main main main"
             "para para img2 img2 img2";
-
 
         #thumb-imgs {
             justify-content: center;
@@ -212,7 +197,6 @@
         column-gap: 3vw;
         row-gap: 2vh;
 
-
         .main-img {
             max-height: 35vh;
         }
@@ -222,7 +206,7 @@
         }
 
         .thumb-container {
-             max-height: 10vh;
+            max-height: 10vh;
         }
 
         p {
@@ -230,5 +214,4 @@
             font-size: 0.9em;
         }
     }
-    
 }

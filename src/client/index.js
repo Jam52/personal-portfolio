@@ -1,52 +1,64 @@
 //import styles
-import './styles/resets.scss';
-import './styles/base.scss';
-import './styles/footer.scss';
-import './styles/menu.scss';
-import './styles/gallery.scss';
-import './styles/eduction.scss';
-import './styles/contact.scss';
+import "./styles/resets.scss";
+import "./styles/base.scss";
+import "./styles/footer.scss";
+import "./styles/menu.scss";
+import "./styles/gallery.scss";
+import "./styles/eduction.scss";
+import "./styles/contact.scss";
 
 //import js
-const { animateMenu } = require('./js/addMenu');
-const { addGallery, removeGallery } = require('./js/addGallery');
-
+const { animateMenu } = require("./js/addMenu");
+const { addGallery, removeGallery } = require("./js/addGallery");
 
 //footer menu click animation
-const menuLink = document.getElementById('menu-link');;
+const menuLink = document.getElementById("menu-link");
 
-menuLink.addEventListener('click', (event) => {
+menuLink.addEventListener("click", (event) => {
     event.preventDefault();
     animateMenu();
-})
+});
 
 //disable scroll while gallery popup is enabled
-function disableScrolling(){
-    var x=window.scrollX;
-    var y=window.scrollY;
-    window.onscroll=function(){window.scrollTo(x, y);};
+function disableScrolling() {
+    var x = window.scrollX;
+    var y = window.scrollY;
+    window.onscroll = function () {
+        window.scrollTo(x, y);
+    };
 }
 
 //gallery images eventlistener
-const gallerys = document.getElementById('projects')
-gallerys.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetSlide = checkForParent(e.target);
-        console.log(targetSlide)
-        if(targetSlide != null){
-            console.log('disable scroll')
-            disableScrolling();
-            addGallery(targetSlide);
-        }
-    })
+const gallerys = document.getElementById("projects");
+gallerys.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetSlide = checkForParent(e.target);
+    console.log(targetSlide);
+    if (targetSlide != null) {
+        console.log("disable scroll");
+        disableScrolling();
+        addGallery(targetSlide);
+    }
+});
 
+const design = document.getElementById("design");
+design.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetSlide = checkForParent(e.target);
+    console.log(targetSlide);
+    if (targetSlide != null) {
+        console.log("disable scroll");
+        disableScrolling();
+        addGallery(targetSlide);
+    }
+});
 
 //find if partent matches slide
 const checkForParent = (target) => {
     let node = target;
 
-    while(node != null) {
-        if(node.classList.contains('slide')){
+    while (node != null) {
+        if (node.classList.contains("slide")) {
             return node;
         } else {
             node = node.parentElement;
@@ -54,32 +66,27 @@ const checkForParent = (target) => {
     }
 
     return null;
-}
+};
 
-
-
-const footerBackground = document.getElementById('footer-background');
-const mainbody = document.querySelector('body');
+const footerBackground = document.getElementById("footer-background");
+const mainbody = document.querySelector("body");
 //scroll listener to remove from image when not at top of screen
-window.addEventListener('scroll', (event) => {
+window.addEventListener("scroll", (event) => {
     let scrollY = window.scrollY;
-    mainbody.style.backgroundPositionY = `${scrollY/10}px`;
-    if(footerBackground.style.height != '100vh'){
-        removeGallery(scrollY)
+    mainbody.style.backgroundPositionY = `${scrollY / 10}px`;
+    if (footerBackground.style.height != "100vh") {
+        removeGallery(scrollY);
     }
-})
+});
 
-
-
-function enableScrolling(){
-    window.onscroll=function(){};
+function enableScrolling() {
+    window.onscroll = function () {};
 }
-
 
 //click listener for gallery cross
-const galleryCross = document.getElementById('gallery-cross');
-galleryCross.addEventListener('click', (event) => {
+const galleryCross = document.getElementById("gallery-cross");
+galleryCross.addEventListener("click", (event) => {
     let scrollY = window.scrollY;
     enableScrolling();
-    removeGallery(scrollY)
-})
+    removeGallery(scrollY);
+});
