@@ -1,13 +1,13 @@
 //Colors
 $color-primary: #f7931e;
 $color-secondary: #2e1e33;
-$color-light-grey: #b1b1b1;
+$color-light-grey: #888888;
 $color-dark-grey: #444;
 //fonts
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
-$paragraph-font: "Raleway", sans-serif;
-$title-font: "Amatic SC", cursive;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+$paragraph-font: 'Raleway', sans-serif;
+$title-font: 'Amatic SC', cursive;
 
 //Media query break-points
 $media-break-point-tablet: 850px;
@@ -15,131 +15,131 @@ $media-break-point-phone: 500px;
 
 //background img
 body {
-    background-size: 100vw;
-    background-image: url("../images/background.png");
-    background-attachment: fixed;
-    background-repeat: repeat-y;
-    background-position: 0px 0px;
-    //background: linear-gradient(135deg, #fff 0%, #eee 50%,  #fff 100%);
+  background-size: 100vw;
+  background-image: url('../images/background.png');
+  background-attachment: fixed;
+  background-repeat: repeat-y;
+  background-position: 0px 0px;
+  //background: linear-gradient(135deg, #fff 0%, #eee 50%,  #fff 100%);
 }
 
 #main-content {
-    margin: 5%;
+  margin: 5%;
 }
 
 #front-img-div {
-    transition-duration: 1.5s;
-    z-index: 21;
-    position: fixed;
-    bottom: -2px;
-    right: 5vw;
+  transition-duration: 1.5s;
+  z-index: 21;
+  position: fixed;
+  bottom: -2px;
+  right: 5vw;
 
-    #front-img {
-        width: 35vw;
-    }
+  #front-img {
+    width: 35vw;
+  }
 }
 
 .section {
-    min-height: 75vh;
-    width: 80vw;
-    max-width: 900px;
-    padding-bottom: 20vh;
-    margin: auto;
+  min-height: 75vh;
+  width: 80vw;
+  max-width: 900px;
+  padding-bottom: 20vh;
+  margin: auto;
 
-    .section-paragraph {
-        padding-bottom: 2vh;
-    }
+  .section-paragraph {
+    padding-bottom: 2vh;
+  }
 }
 
 h1 {
-    padding: 40px 0px;
-    font-family: $title-font;
-    font-size: 12vmin;
-    color: $color-primary;
+  padding: 40px 0px;
+  font-family: $title-font;
+  font-size: 12vmin;
+  color: $color-primary;
 
-    span {
-        color: $color-secondary;
-    }
+  span {
+    color: $color-secondary;
+  }
 }
 
 h2 {
-    padding: 0 0 40px 0;
-    font-family: $title-font;
-    font-size: 10vmin;
-    color: $color-primary;
+  padding: 0 0 40px 0;
+  font-family: $title-font;
+  font-size: 10vmin;
+  color: $color-primary;
 
-    span {
-        color: $color-secondary;
-    }
+  span {
+    color: $color-secondary;
+  }
 }
 
 h3 {
-    font-family: $paragraph-font;
-    font-size: 1.5rem;
-    color: $color-dark-grey;
+  font-family: $paragraph-font;
+  font-size: 1.5rem;
+  color: $color-dark-grey;
 }
 
 p {
-    font-family: $paragraph-font;
-    font-size: 1.3em;
-    max-width: 50ch;
-    color: $color-dark-grey;
+  font-family: $paragraph-font;
+  font-size: 1.3em;
+  max-width: 50ch;
+  color: $color-dark-grey;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #section-return {
-    width: 70vw;
-    margin: 0;
+  width: 70vw;
+  margin: 0;
 }
 
 //@extend
 .load {
-    opacity: 1;
+  opacity: 1;
 }
 
 //Media query for phone size
 @media (max-width: $media-break-point-tablet) {
-    #menu-icon {
-        p {
-            display: none;
-        }
+  #menu-icon {
+    p {
+      display: none;
     }
-    #section-return {
-        h1 {
-            padding-top: 40px;
-        }
+  }
+  #section-return {
+    h1 {
+      padding-top: 40px;
     }
+  }
 }
 
 @media (max-width: $media-break-point-phone) {
-    #front-img-div {
-        #front-img {
-            width: 50vw;
-        }
+  #front-img-div {
+    #front-img {
+      width: 50vw;
     }
+  }
 
-    .section {
-        min-height: 83vh;
-        width: 90vw;
-    }
+  .section {
+    min-height: 83vh;
+    width: 90vw;
+  }
 
-    #section-return {
-        width: 80vw;
-    }
+  #section-return {
+    width: 80vw;
+  }
 }
 
 //keyframes
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
