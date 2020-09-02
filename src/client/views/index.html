@@ -1,353 +1,324 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-    <body>
-        <a id="menu-link" href="#">
-            <div id="menu-icon">
-                <p>M</p>
-                <div id="menu-lines">
-                    <hr />
-                    <hr />
-                    <hr />
-                </div>
-                <p>NU</p>
-            </div>
-        </a>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a id="menu-link" href="#">
+      <div id="menu-icon">
+        <p>M</p>
+        <div id="menu-lines">
+          <hr />
+          <hr />
+          <hr />
+        </div>
+        <p>NU</p>
+      </div>
+    </a>
 
-        <div id="front-img-div">
-            <img
-                id="front-img"
-                src="./../images/profile.png"
-                alt="Picture of Jamie Sajdak"
-            />
+    <div id="front-img-div">
+      <img
+        id="front-img"
+        src="./../images/profile.png"
+        alt="Picture of Jamie Sajdak"
+      />
+    </div>
+
+    <main id="main-content">
+      <div
+        class="into-section section"
+        id="section-return"
+        name="return"
+        value="home"
+      >
+        <h1>Hi, my name is <span>Jamie Sajdak</span></h1>
+        <p class="section-paragraph">
+          I am an aspiring web developer, formally industrial designer, with a
+          passion for building things.
+          <br />
+          <br />I have a creative but technical mindset with a drive to learn
+          and improve.
+        </p>
+      </div>
+      <div
+        class="section"
+        id="section-development"
+        name="development"
+        value="projects"
+      >
+        <h2>Development <span>Projects</span></h2>
+        <p class="section-paragraph">
+          Below is the ever growing list of technologies I have studies so
+          far:<br /><br />
+
+          <strong
+            >Html, CSS, SCSS, JavaScript, Java, NodeJs, Webpack, React, RESTfull
+            APIs, BEM standards, WCAG, EsLint, Jest</strong
+          ><br /><br />
+          Please take a look at some select projects that I am proud of from my
+          web development training so far.
+        </p>
+        <div class="gallery" id="projects">
+          <div class="slide" id="personal-portfolio">
+            <div class="slide-img">
+              <img
+                src="../images/personalPortfolio.JPG"
+                alt="personal portfolio project"
+              />
+            </div>
+            <p>Html, CSS, JS, Webpack</p>
+          </div>
+          <div class="slide" id="travel-planner">
+            <div class="slide-img">
+              <img
+                src="../images/travel-thumb.JPG"
+                alt="travel planner project"
+              />
+            </div>
+            <p>Node, Express, RESTful API</p>
+          </div>
+
+          <div class="slide" id="small-foods">
+            <div class="slide-img">
+              <img
+                src="../images/smallfoods-thumb.JPG"
+                alt="smallfoods project"
+              />
+            </div>
+            <p>Html, CSS, BEM, WCAG</p>
+          </div>
+          <div class="slide" id="madame-mimis">
+            <div class="slide-img">
+              <img
+                src="../images/madam-mimis-thumb.jpg"
+                alt="madame mimis project"
+              />
+            </div>
+            <p>React, CSS, RESTful API</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="section-design" name="design" value="projects">
+        <h2>Design <span>Projects</span></h2>
+        <p class="section-paragraph">
+          Below are some select projects from my industrial design career and
+          some self driven projects I am particularly proud of.
+        </p>
+        <div class="gallery" id="design">
+          <div class="slide" id="orbit">
+            <div class="slide-img">
+              <img src="../images/orbit.jpg" alt="orbit coffee table" />
+            </div>
+            <p>furniture design</p>
+          </div>
+
+          <div class="slide" id="float">
+            <div class="slide-img">
+              <img
+                src="../images/floatEscape.jpg"
+                alt="float escape interior design"
+              />
+            </div>
+            <p>interior design</p>
+          </div>
+          <div class="slide" id="shobu">
+            <div class="slide-img">
+              <img src="../images/shobu-1.jpg" alt="shobu boardgame" />
+            </div>
+            <p>boardgame design</p>
+          </div>
+          <div class="slide" id="dmz">
+            <div class="slide-img">
+              <img
+                src="../images/dmz-thumb.jpg"
+                alt="dmz reception interior design"
+              />
+            </div>
+            <p>interior design</p>
+          </div>
+          <div class="slide" id="summit">
+            <div class="slide-img">
+              <img src="../images/summit.jpg" alt="summit coffee table" />
+            </div>
+            <p>furniture design</p>
+          </div>
+          <div class="slide" id="move">
+            <div class="slide-img">
+              <img
+                src="../images/move.jpg"
+                alt="move womens gym interior design"
+              />
+            </div>
+            <p>interior design</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="section"
+        id="section-education"
+        name="education"
+        value="&certificates"
+      >
+        <h2>Education <span>& Certificates</span></h2>
+        <div class="education-elements-container">
+          <div class="education-element">
+            <a target="_blank" href="https://confirm.udacity.com/ZPT6GESG">
+              <div class="education-img-container">
+                <img
+                  class="education-img"
+                  src="../images/udacity.jpg"
+                  alt="udacity logo"
+                />
+                <img
+                  class="education-img hidden"
+                  src="../images/FrontEnd-Certificate.PNG"
+                  alt="front end certificate"
+                />
+              </div>
+            </a>
+            <div class="education-info">
+              <h3>Udacity</h3>
+              <p>Front End Web Development</p>
+            </div>
+          </div>
+          <div class="education-element">
+            <a
+              target="_blank"
+              href="https://www.freecodecamp.org/certification/fcc7637faad-66eb-4819-959b-167513323569/responsive-web-design"
+            >
+              <div class="education-img-container">
+                <img
+                  class="education-img"
+                  src="../images/freeCodeCamp-logo.jpg"
+                  alt="free code camp"
+                />
+                <img
+                  class="education-img hidden"
+                  src="../images/freecoaecamp_ResponsiveWebDesign.PNG"
+                  alt="responsive web design certificate"
+                />
+              </div>
+            </a>
+            <div class="education-info">
+              <h3>FreeCodeCamp</h3>
+              <p>Responsive Web Design</p>
+            </div>
+          </div>
+          <div class="education-element">
+            <a
+              target="_blank"
+              href="https://www.freecodecamp.org/certification/fcc7637faad-66eb-4819-959b-167513323569/responsive-web-design"
+            >
+              <div class="education-img-container">
+                <img
+                  class="education-img"
+                  src="../images/freeCodeCamp-logo.jpg"
+                  alt="free code camp"
+                />
+                <img
+                  class="education-img hidden"
+                  src="../images/freecoaecamp_JSAlgorithmsAndDataStructures.PNG"
+                  alt="JS algorithms and data structures certificate"
+                />
+              </div>
+            </a>
+            <div class="education-info">
+              <h3>FreeCodeCamp</h3>
+              <p>JS Algorithms and Data Structures</p>
+            </div>
+          </div>
+          <div class="education-element">
+            <div>
+              <div class="education-img-container">
+                <img
+                  class="education-img"
+                  src="../images/nottingham-logo.jpg"
+                  alt="notting trent university"
+                />
+                <img
+                  class="education-img hidden"
+                  src="../images/nottingham.jpg"
+                  alt="notting trent university full logo"
+                />
+              </div>
+            </div>
+            <div class="education-info">
+              <h3>Nottingham Trent University</h3>
+              <p>B/A Furniture and Product Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="section-contact" name="contact" value="me">
+        <div class="contact-section__text">
+          <h2>Contact <span>Me</span></h2>
+          <h3>Thank you for taking the time to view my portfolio!</h3>
+          <p class="contact">jamie.sajdak@gmail.com</p>
+          <p class="contact">(647) 465 4864</p>
+          <p class="contact">Toronto, ON</p>
         </div>
 
-        <main id="main-content">
-            <div
-                class="into-section section"
-                id="section-return"
-                name="return"
-                value="home"
-            >
-                <h1>Hi, my name is <span>Jamie Sajdak</span></h1>
-                <p class="section-paragraph">
-                    I am an aspiring web developer, formally industrial
-                    designer, with a passion for building things.
-                    <br />
-                    <br />I have a creative but technical mindset with a drive
-                    to learn and improve.
-                </p>
-            </div>
-            <div
-                class="section"
-                id="section-development"
-                name="development"
-                value="projects"
-            >
-                <h2>Development <span>Projects</span></h2>
-                <p class="section-paragraph">
-                    Below are some select projects that I am proud of from my
-                    web development training so far.
-                </p>
-                <div class="gallery" id="projects">
-                    <div class="slide" id="personal-portfolio">
-                        <div class="slide-img">
-                            <img
-                                src="../images/personalPortfolio.JPG"
-                                alt="personal portfolio project"
-                            />
-                        </div>
-                        <p>Html, CSS, JS, Webpack</p>
-                    </div>
-                    <div class="slide" id="travel-planner">
-                        <div class="slide-img">
-                            <img
-                                src="../images/travel-thumb.JPG"
-                                alt="travel planner project"
-                            />
-                        </div>
-                        <p>Node, Express, RESTful API</p>
-                    </div>
+        <form
+          class="contact-form"
+          action="https://formspree.io/xeqrbrbb"
+          method="POST"
+        >
+          <div class="contact-form__section">
+            <label for="_replyto">Email:</label>
+            <input
+              type="email"
+              name="_replyto"
+              id="_replyto"
+              class="contact-form__input"
+            />
+          </div>
+          <div class="contact-form__section">
+            <label for="text">Message:</label>
+            <textarea
+              class="contact-form__input"
+              type="textarea"
+              rows="3"
+              name="text"
+              id="text"
+            ></textarea>
+          </div>
+          <div class="contact-form__section">
+            <input class="contact-form__submit" type="submit" value="Send" />
+          </div>
+        </form>
+      </div>
+    </main>
 
-                    <div class="slide" id="small-foods">
-                        <div class="slide-img">
-                            <img
-                                src="../images/smallfoods-thumb.JPG"
-                                alt="smallfoods project"
-                            />
-                        </div>
-                        <p>Html, CSS, BEM, WCAG</p>
-                    </div>
-                    <div class="slide" id="madame-mimis">
-                        <div class="slide-img">
-                            <img
-                                src="../images/madam-mimis-thumb.jpg"
-                                alt="madame mimis project"
-                            />
-                        </div>
-                        <p>React, CSS, RESTful API</p>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="section"
-                id="section-design"
-                name="design"
-                value="projects"
-            >
-                <h2>Design <span>Projects</span></h2>
-                <p class="section-paragraph">
-                    Below are some select projects from my industrial design
-                    career and some self driven projects I am particularly proud
-                    of.
-                </p>
-                <div class="gallery" id="design">
-                    <div class="slide" id="orbit">
-                        <div class="slide-img">
-                            <img
-                                src="../images/orbit.jpg"
-                                alt="orbit coffee table"
-                            />
-                        </div>
-                        <p>furniture design</p>
-                    </div>
-
-                    <div class="slide" id="float">
-                        <div class="slide-img">
-                            <img
-                                src="../images/floatEscape.jpg"
-                                alt="float escape interior design"
-                            />
-                        </div>
-                        <p>interior design</p>
-                    </div>
-                    <div class="slide" id="shobu">
-                        <div class="slide-img">
-                            <img
-                                src="../images/shobu-1.jpg"
-                                alt="shobu boardgame"
-                            />
-                        </div>
-                        <p>boardgame design</p>
-                    </div>
-                    <div class="slide" id="dmz">
-                        <div class="slide-img">
-                            <img
-                                src="../images/dmz-thumb.jpg"
-                                alt="dmz reception interior design"
-                            />
-                        </div>
-                        <p>interior design</p>
-                    </div>
-                    <div class="slide" id="summit">
-                        <div class="slide-img">
-                            <img
-                                src="../images/summit.jpg"
-                                alt="summit coffee table"
-                            />
-                        </div>
-                        <p>furniture design</p>
-                    </div>
-                    <div class="slide" id="move">
-                        <div class="slide-img">
-                            <img
-                                src="../images/move.jpg"
-                                alt="move womens gym interior design"
-                            />
-                        </div>
-                        <p>interior design</p>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="section"
-                id="section-education"
-                name="education"
-                value="&certificates"
-            >
-                <h2>Education <span>& Certificates</span></h2>
-                <div class="education-elements-container">
-                    <div class="education-element">
-                        <a
-                            target="_blank"
-                            href="https://confirm.udacity.com/ZPT6GESG"
-                        >
-                            <div class="education-img-container">
-                                <img
-                                    class="education-img"
-                                    src="../images/udacity.jpg"
-                                    alt="udacity logo"
-                                />
-                                <img
-                                    class="education-img hidden"
-                                    src="../images/FrontEnd-Certificate.PNG"
-                                    alt="front end certificate"
-                                />
-                            </div>
-                        </a>
-                        <div class="education-info">
-                            <h3>Udacity</h3>
-                            <p>Front End Web Development</p>
-                        </div>
-                    </div>
-                    <div class="education-element">
-                        <a
-                            target="_blank"
-                            href="https://www.freecodecamp.org/certification/fcc7637faad-66eb-4819-959b-167513323569/responsive-web-design"
-                        >
-                            <div class="education-img-container">
-                                <img
-                                    class="education-img"
-                                    src="../images/freeCodeCamp-logo.jpg"
-                                    alt="free code camp"
-                                />
-                                <img
-                                    class="education-img hidden"
-                                    src="../images/freecoaecamp_ResponsiveWebDesign.PNG"
-                                    alt="responsive web design certificate"
-                                />
-                            </div>
-                        </a>
-                        <div class="education-info">
-                            <h3>FreeCodeCamp</h3>
-                            <p>Responsive Web Design</p>
-                        </div>
-                    </div>
-                    <div class="education-element">
-                        <a
-                            target="_blank"
-                            href="https://www.freecodecamp.org/certification/fcc7637faad-66eb-4819-959b-167513323569/responsive-web-design"
-                        >
-                            <div class="education-img-container">
-                                <img
-                                    class="education-img"
-                                    src="../images/freeCodeCamp-logo.jpg"
-                                    alt="free code camp"
-                                />
-                                <img
-                                    class="education-img hidden"
-                                    src="../images/freecoaecamp_JSAlgorithmsAndDataStructures.PNG"
-                                    alt="JS algorithms and data structures certificate"
-                                />
-                            </div>
-                        </a>
-                        <div class="education-info">
-                            <h3>FreeCodeCamp</h3>
-                            <p>JS Algorithms and Data Structures</p>
-                        </div>
-                    </div>
-                    <div class="education-element">
-                        <div>
-                            <div class="education-img-container">
-                                <img
-                                    class="education-img"
-                                    src="../images/nottingham-logo.jpg"
-                                    alt="notting trent university"
-                                />
-                                <img
-                                    class="education-img hidden"
-                                    src="../images/nottingham.jpg"
-                                    alt="notting trent university full logo"
-                                />
-                            </div>
-                        </div>
-                        <div class="education-info">
-                            <h3>Nottingham Trent University</h3>
-                            <p>B/A Furniture and Product Design</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section" id="section-contact" name="contact" value="me">
-                <div class="contact-section__text">
-                    <h2>Contact <span>Me</span></h2>
-                    <h3>Thank you for taking the time to view my portfolio!</h3>
-                    <p class="contact">jamie.sajdak@gmail.com</p>
-                    <p class="contact">(647) 465 4864</p>
-                    <p class="contact">Toronto, ON</p>
-                </div>
-
-                <form
-                    class="contact-form"
-                    action="https://formspree.io/xeqrbrbb"
-                    method="POST"
-                >
-                    <div class="contact-form__section">
-                        <label for="_replyto">Email:</label>
-                        <input
-                            type="email"
-                            name="_replyto"
-                            id="_replyto"
-                            class="contact-form__input"
-                        />
-                    </div>
-                    <div class="contact-form__section">
-                        <label for="text">Message:</label>
-                        <textarea
-                            class="contact-form__input"
-                            type="textarea"
-                            rows="3"
-                            name="text"
-                            id="text"
-                        ></textarea>
-                    </div>
-                    <div class="contact-form__section">
-                        <input
-                            class="contact-form__submit"
-                            type="submit"
-                            value="Send"
-                        />
-                    </div>
-                </form>
-            </div>
-        </main>
-
-        <footer id="footer-div">
-            <img id="footer-paper" src="../images/torn-paper.png" />
-            <div id="footer-background">
-                <div id="menu"></div>
-                <img
-                    img
-                    src="../images/menu-cross.png"
-                    id="gallery-cross"
-                    alt=""
-                />
-                <div id="popup-gallery-container"></div>
-                <div id="footer-contact">
-                    <a
-                        href="mailto:jamie.sajdak@gmail.com"
-                        target="_blank"
-                        class="footer-social-icon"
-                        ><img
-                            id="email"
-                            src="../images/emailImg.png"
-                            alt="email"
-                    /></a>
-                    <a
-                        href="https://github.com/Jam52"
-                        target="_blank"
-                        class="footer-social-icon"
-                        ><img
-                            id="github"
-                            src="../images/githubImg.png"
-                            alt="github"
-                    /></a>
-                    <a
-                        href="https://www.linkedin.com/in/jamie-sajdak-07559237/"
-                        target="_blank"
-                        class="footer-social-icon"
-                        ><img
-                            id="linkedin"
-                            src="../images/linkedIn.png"
-                            alt="linkedIn"
-                    /></a>
-                </div>
-            </div>
-        </footer>
-    </body>
+    <footer id="footer-div">
+      <img id="footer-paper" src="../images/torn-paper.png" />
+      <div id="footer-background">
+        <div id="menu"></div>
+        <img img src="../images/menu-cross.png" id="gallery-cross" alt="" />
+        <div id="popup-gallery-container"></div>
+        <div id="footer-contact">
+          <a
+            href="mailto:jamie.sajdak@gmail.com"
+            target="_blank"
+            class="footer-social-icon"
+            ><img id="email" src="../images/emailImg.png" alt="email"
+          /></a>
+          <a
+            href="https://github.com/Jam52"
+            target="_blank"
+            class="footer-social-icon"
+            ><img id="github" src="../images/githubImg.png" alt="github"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/jamie-sajdak-07559237/"
+            target="_blank"
+            class="footer-social-icon"
+            ><img id="linkedin" src="../images/linkedIn.png" alt="linkedIn"
+          /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
