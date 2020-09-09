@@ -1,4 +1,4 @@
-@import "base";
+@import 'base';
 
 .education-elements-container {
   display: grid;
@@ -14,8 +14,13 @@
   width: 90%;
   margin: 0.1rem auto;
 
+  h3 {
+    font-size: 1.2rem;
+  }
+
   p {
     color: $color-light-grey;
+    font-size: 1rem;
   }
 
   .education-info {
@@ -28,7 +33,9 @@
   overflow: hidden;
   background-color: #000;
   width: 25vmin;
+  max-width: 250px;
   height: 25vmin;
+  max-height: 250px;
   padding-top: 100%;
   border-radius: 50%;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
@@ -64,5 +71,11 @@
   .education-element {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+@media (min-width: $media-break-point-computer-large) {
+  .education-elements-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }

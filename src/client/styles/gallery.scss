@@ -4,7 +4,7 @@
   margin-top: 5vh;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 15px;
 
   .slide {
@@ -39,8 +39,9 @@
 
     p {
       color: $color-light-grey;
-      font-family: $title-font;
-      font-size: 1.4rem;
+      font-family: $paragraph-font;
+      font-size: 0.8rem;
+      font-weight: 700;
       text-align: center;
       transition-duration: 0.2s;
     }
@@ -215,5 +216,11 @@
       align-self: start;
       font-size: 0.9em;
     }
+  }
+}
+
+@media (max-width: $media-break-point-computer-large) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }

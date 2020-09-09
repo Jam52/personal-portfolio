@@ -1,93 +1,88 @@
 @import 'base';
 
 #menu-link {
-    z-index: 10;
+  z-index: 10;
 }
 
 #menu-icon {
-    z-index: 10;
-    position: fixed;
-    top: 3vh;
-    right: 3vw;
+  z-index: 10;
+  position: fixed;
+  top: 3vh;
+  right: 3vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  p {
+    font-family: $paragraph-font;
+    color: $color-primary;
+    font-size: 2rem;
+  }
+
+  #menu-lines {
+    transition-duration: 1s;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
 
-    p {
-        font-family: $paragraph-font;
-        color: $color-primary;
-        font-size: 30px;
+    hr {
+      margin: 4px;
+      width: 1.4rem;
+      height: 2px;
+      background-color: $color-secondary;
+      border-width: 0;
     }
-
-    #menu-lines {
-        transition-duration: 1s;
-        height: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        hr {
-            margin: 4px;
-            width: 20px;
-            height: 2px;
-            background-color: $color-secondary;
-            border-width: 0;
-        }
-    }
+  }
 }
 
 #menu {
-    margin-left: 5vw;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-    .menu-item {
-        opacity: 0;
-        transition-duration: 1s;
+  .menu-item {
+    opacity: 0;
+    transition-duration: 1s;
+  }
+
+  .load {
+    opacity: 1;
+  }
+
+  a {
+    text-decoration: none;
+
+    p {
+      display: inline-block;
+      font-size: 2.5em;
+      font-family: $paragraph-font;
+      padding: 10px 2px;
+      opacity: 0;
+      transition-duration: 1s;
+      color: $color-primary;
     }
 
-    .load {
-        opacity: 1;
+    p:nth-of-type(1) {
+      opacity: 1;
+      color: $color-light-grey;
+      &:hover {
+        color: #fff;
+      }
     }
+  }
 
-    a {
-        text-decoration: none;
-
-        p {
-            display: inline-block;
-            font-size: 2.5em;
-            font-family: $paragraph-font;
-            padding: 10px 2px;
-            opacity: 0;
-            transition-duration: 1s;
-            color: $color-primary;
-
-        }
-
-        p:nth-of-type(1){
-            opacity: 1;
-            color: $color-light-grey;
-            &:hover {
-                color: #fff;
-            }
-        }
-
-    }
-
-    a:hover > * {
-        opacity: 1;
-    }
+  a:hover > * {
+    opacity: 1;
+  }
 }
 
-
 @media (max-width: $media-break-point-phone) {
-    #menu {
-        a {
-            p {
-                font-size: 25px;
-            }
-        
-        }
+  #menu {
+    a {
+      p {
+        font-size: 25px;
+      }
     }
+  }
 }

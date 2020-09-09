@@ -12,6 +12,8 @@ $title-font: 'Amatic SC', cursive;
 //Media query break-points
 $media-break-point-tablet: 850px;
 $media-break-point-phone: 500px;
+$media-break-point-computer-small: 1000px;
+$media-break-point-computer-large: 2000px;
 
 //background img
 body {
@@ -36,19 +38,24 @@ body {
 
   #front-img {
     width: 35vw;
+    max-width: 600px;
   }
 }
 
 .section {
-  min-height: 75vh;
+  // min-height: 75vh;
   width: 80vw;
-  max-width: 900px;
+  max-width: 1400px;
   padding-bottom: 20vh;
   margin: auto;
 
   .section-paragraph {
     padding-bottom: 2vh;
   }
+}
+
+.intro-section {
+  min-height: 75vh;
 }
 
 h1 {
@@ -84,6 +91,7 @@ p {
   font-size: 1.3em;
   max-width: 50ch;
   color: $color-dark-grey;
+  line-height: 120%;
 }
 
 a {
@@ -141,5 +149,11 @@ a {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (min-width: $media-break-point-computer-large) {
+  html {
+    font-size: 25px;
   }
 }
